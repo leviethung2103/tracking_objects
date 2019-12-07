@@ -3,7 +3,9 @@
 
 [2. Examples of multiple object tracking methods](https://www.coursera.org/lecture/deep-learning-in-computer-vision/examples-of-multiple-object-tracking-methods-VJZUW)
 
+## Articles:
 
+[Simple Tracking with OpenCV](https://www.pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/)
 
 ## Lecture Slides
 
