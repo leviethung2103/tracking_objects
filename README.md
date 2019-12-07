@@ -1,3 +1,9 @@
+## Videos
+[Introduction to Video Analysis](https://www.coursera.org/lecture/deep-learning-in-computer-vision/introduction-to-video-analysis-alApg)
+
+
+
+
 ## Lecture Slides
 
 CS231-Stanford University:
