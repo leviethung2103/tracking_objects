@@ -5,11 +5,49 @@
 * Multi-target tracking
 
 
+A good detector is the key. 
+
+
+### Definitions
+
+Online Tracking and Offline Tracking. 
+
+Online Tracking: only the previous frame and current frame are available. 
+
+Offline Tracking (batch tracking): all frames are available 
+
+Data Association: The association of detection between frames. 
+* Two frame methods: simple and suitable for online tracking 
+* Multiple frame methods: consider the whole video
+
+Affinity = Similarity
+
+Simple Association: Overlapping between IoU of previous frame and current frame. For each track, select the detection with the hightest IoU. If IoU is larger than threshold, add this IoU to the track and remove it from the list of unassociated detections. If the best overlap is still lower than the threshold then finish the track. If the track is too short or had no higher confidence directions, consider the track false positives and then remove it from the final list of tracks. 
+
+
+Simple Online and Realtime Tracking (SOR)
+* CNN-based object detector
+* Kalman Filter for prediction of object position in current frame based on positions in previous frames.
+* Hungarian alogirthm for matching object detections in curerent frames with predicted positions. 
+* IoU of detected and predicted bounding boxes for matching detection track.
+
+Reduces ID switches (ID sw), False negatives, Mostly Lost (ML) and increases Mostly Tracked (MT).
+
+Points of observed scene are moving relative to the camera 
+Vector fields of 2D projections of scene point motion vectors is called motion field
+
+Capture the motion field using Optical Flow. Optical Flow is the vector field 
+
+Dataset: 
+DETRACK-dataset
+
 
 ## Videos
 [1. Introduction to Video Analysis](https://www.coursera.org/lecture/deep-learning-in-computer-vision/introduction-to-video-analysis-alApg)
 
 [2. Examples of multiple object tracking methods](https://www.coursera.org/lecture/deep-learning-in-computer-vision/examples-of-multiple-object-tracking-methods-VJZUW)
+
+[3. Optical Flow](https://www.coursera.org/lecture/deep-learning-in-computer-vision/optical-flow-2wMqQ)
 
 ## Articles:
 
